@@ -1,0 +1,113 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set body background and font styles */
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Set header styles */
+header {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  
+}
+
+/* Set container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Set movie styles */
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.movie {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.movie h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movie p {
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.movie a {
+  display: inline-block;
+  background-color: #e50914;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.movie a:hover {
+  background-color: #b2070a;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 20px;
+  }
+
+  .movies {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 10px;
+  }
+
+  .movie {
+      padding: 10px;
+  }
+}
+.movie .read-more{
+  color: #e50914;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.movie .read-more:hover{
+  text-decoration: underline;
+}
+.movie p.expanded{
+  -webkit-line-clamp: initial;
+}
